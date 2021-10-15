@@ -12,4 +12,5 @@ import lombok.NoArgsConstructor;
 public class Product {
     private int id;
     private int quantity;
+    private float discount;
 }

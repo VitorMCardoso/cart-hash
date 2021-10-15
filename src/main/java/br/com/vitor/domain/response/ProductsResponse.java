@@ -15,6 +15,6 @@ public class ProductsResponse {
     private Integer quantity;
     private Long unitAmount;
     private Long totalAmount;
-    private float discount;
+    private Long discount;
     private Boolean isGift;
 }

@@ -45,20 +45,15 @@ You can then execute your native executable with: `./target/carrinho-1.0-SNAPSHO
 
 If you want to learn more about building native executables, please consult https://quarkus.io/guides/maven-tooling.html.
 
-## Related Guides
+## Running Docker
 
-- RESTEasy JAX-RS ([guide](https://quarkus.io/guides/rest-json)): REST endpoint framework implementing JAX-RS and more
+You can build using docker-compose
+```shell script
+docker-compose up -d 
+```
 
-## Provided Code
-
-### gRPC
-
-Create your first gRPC service
-
-[Related guide section...](https://quarkus.io/guides/grpc-getting-started)
-
-### RESTEasy JAX-RS
-
-Easily start your RESTful Web Services
-
-[Related guide section...](https://quarkus.io/guides/getting-started#the-jax-rs-resources)
+You can build using Dockerfile
+```shell script
+docker build -t cart:hash -f Dockerfile.jvm .
+docker run cartt:hash
+```

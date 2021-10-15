@@ -15,7 +15,7 @@ public class CartResponse {
 
     private Long totalAmount;
     private Long totalAmountWithDiscount;
-    private Double totalDiscount;
+    private Long totalDiscount;
     private List<ProductsResponse> products;
 
 }

@@ -1,16 +1,18 @@
 package br.com.vitor.service;
 
-import br.com.vitor.*;
+import br.com.vitor.Discount;
+import br.com.vitor.GetDiscountRequest;
+import br.com.vitor.GetDiscountResponse;
 import io.quarkus.grpc.GrpcService;
 import io.smallrye.mutiny.Uni;
 
-import javax.inject.Inject;
-
 @GrpcService
-public class DiscountService extends MutinyDiscountGrpc.DiscountImplBase {
+public class DiscountService implements Discount {
 
     @Override
     public Uni<GetDiscountResponse> getDiscount(GetDiscountRequest request) {
-        return super.getDiscount(request);
+        return Uni.createFrom().item(() -> GetDiscountResponse.newBuilder()
+                .setPercentage(1f)
+                .build());
     }
 }
